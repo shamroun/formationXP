@@ -3,6 +3,51 @@ package fr.excilys.formation.bowliwood;
 import java.util.Scanner;
 
 public class Joueur {
+    	public enum typeLancee {NORMAL,STRIKE,SPARE }
+    	
+    	int [] quilleLancee1= new int[10];
+    	int [] quilleLancee2= new int[10];
+    	int [] scoresRound= new int[10];
+    	typeLancee [] typeDeLaLancee = new typeLancee[10];
+    	
+//    	public Joueur(int [] quilleLancee1, int [] quilleLancee2, int [] scoresRound, typeLancee [] typeDeLaLancee )
+//    	{
+//    	    this.quilleLancee1 = quilleLancee1;
+//    	    this.quilleLancee2 = quilleLancee2;
+//    	    this.typeDeLaLancee = typeDeLaLancee;
+//    	}
+    	
+	public int[] getScoresRound() {
+	    return scoresRound;
+	}
+
+	public void setScoresRound(int[] scoresRound) {
+	    this.scoresRound = scoresRound;
+	}
+
+	public int[] getquilleLancee1() {
+	    return quilleLancee1;
+	}
+
+	public void setquilleLancee1(int[] quilleLancee1) {
+	    this.quilleLancee1 = quilleLancee1;
+	}
+
+	public int[] getquilleLancee2() {
+	    return quilleLancee2;
+	}
+
+	public void setquilleLancee2(int[] quilleLancee2) {
+	    this.quilleLancee2 = quilleLancee2;
+	}
+
+	public typeLancee[] getTypeDeLaLancee() {
+	    return typeDeLaLancee;
+	}
+
+	public void setTypeDeLaLancee(typeLancee[] typeDeLaLancee) {
+	    this.typeDeLaLancee = typeDeLaLancee;
+	}
 
 	public static int playersNumber() {
 		int number = 0;
