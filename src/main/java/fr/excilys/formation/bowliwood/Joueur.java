@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Joueur {
 
 	public static int playersNumber() {
-		int number=0;
+		int number = 0;
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		number=Integer.parseInt(str); 
@@ -16,12 +16,12 @@ public class Joueur {
 	public static String[] playersNames(int numberOfPlayers)
 	{
 		String names[]=new String[numberOfPlayers];
-		for(int i=0; i<numberOfPlayers;i++)
+		for(int i=0 ; i<numberOfPlayers ; i++)
 		{
-			System.out.println("Joueur numéro: "+(i+1));
+			System.out.println("Joueur numéro: " + (i + 1));
 			Scanner sc1 = new Scanner(System.in);
 			String str = sc1.nextLine();
-			names[i]=str;
+			names[i] = str;
 			System.out.println(names[i]);
 			//sc1.close();
 
@@ -33,8 +33,8 @@ public class Joueur {
 		int score=0;
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
-		score=Integer.parseInt(str); 
-		//sc.close();
+	score = Integer.parseInt(str);
+	// sc.close();
 		return score;
 	}
 	
