@@ -1,7 +1,7 @@
 package fr.excilys.formation.bowliwood;
 
 import org.junit.Test;
-import static org.junit.Assert.fail;
+
 
 public class ContinuousIntegrationTest {
 
@@ -9,8 +9,20 @@ public class ContinuousIntegrationTest {
 	/**
 	 * Failing test. Should be changed for CI.
 	 */
-	public void testFailure() {
+	public void main() {
 		//fail();
+		Joueur joueur=new Joueur();
 		System.out.println("Hello World!!");
+		int number=joueur.playersNumber();
+		String [] names=joueur.playersNames(number);
 	}
+
+
+	
+
+
+	
+
+
+
 }
