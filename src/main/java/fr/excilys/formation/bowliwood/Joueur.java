@@ -61,13 +61,10 @@ public class Joueur {
 			String str = sc.nextLine();
 			try {
 				number = Integer.parseInt(str);
-				if(number>=1)
-				{
+				if (number >= 1) {
 					System.out.println("saisi acceptée");
 					isANumber = true;
-				}
-				else 
-				{
+				} else {
 					System.out.println("Nombre de joueurs doit etre > ou egal a 1");
 					isANumber = false;
 				}
@@ -82,11 +79,19 @@ public class Joueur {
 
 	public static String[] playersNames(Scanner sc, int numberOfPlayers) {
 		String names[] = new String[numberOfPlayers];
+		boolean notNull = false;
 		for (int i = 0; i < numberOfPlayers; i++) {
+			notNull = false;
 			System.out.println("Joueur numéro: " + (i + 1));
 			String str = sc.nextLine();
+			notNull = (str.length() != 0);
+			while (notNull == false) {
+				System.out.println("Nom du joueur ne doit pas etre vide. Reessayer");
+				str = sc.nextLine();
+				notNull = (str.length() != 0);
+			}
 			names[i] = str;
-			System.out.println(names[i]);
+			System.out.println(names[i]+" est un nom valide");
 
 		}
 		return names;
@@ -113,7 +118,9 @@ public class Joueur {
 
 //		Scanner sc = new Scanner(System.in);
 //		score(sc);
-//		playersNumber(sc);
+//		int i = playersNumber(sc);
+//		playersNames(sc, i);
+//		playersNames(sc, i);
 //		sc.close();
 	}
 

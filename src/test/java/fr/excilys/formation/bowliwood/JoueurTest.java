@@ -44,5 +44,16 @@ public class JoueurTest {
 		assertEquals(Joueur.playersNumber(sc),2);
 		sc.close();
 	}
+	
+	@Test
+	public void testPlayersNames()
+	{
+		System.out.println("Test des noms des joueurs:");
+		ByteArrayInputStream in = new ByteArrayInputStream("\naa\n".getBytes());
+		System.setIn(in);
+		Scanner sc= new Scanner(System.in);
+		assertEquals(Joueur.playersNames(sc,1)[0],"aa");
+		sc.close();
+	}
 
 }
