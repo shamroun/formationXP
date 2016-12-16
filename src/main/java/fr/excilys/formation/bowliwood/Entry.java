@@ -12,9 +12,9 @@ public class Entry {
 	Joueur joueur = new Joueur();
 //	Joueur joueur = new Joueur( quilleLancee1, quilleLancee2, scoresRound,  typeDeLaLancee);
 
-	System.out.println("Hello World!!");
-	int number = joueur.playersNumber();
-	System.out.println("x");
-	String[] names = joueur.playersNames(number);
+//	System.out.println("Hello World!!");
+//	int number = joueur.playersNumber();
+//	System.out.println("x");
+//	String[] names = joueur.playersNames(number);
     }
 }
