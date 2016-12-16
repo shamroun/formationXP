@@ -11,42 +11,44 @@ public class Joueur {
     	typeLancee [] typeDeLaLancee = new typeLancee[10];
     	
 //    	public Joueur(int [] quilleLancee1, int [] quilleLancee2, int [] scoresRound, typeLancee [] typeDeLaLancee )
+//    	
 //    	{
 //    	    this.quilleLancee1 = quilleLancee1;
 //    	    this.quilleLancee2 = quilleLancee2;
 //    	    this.typeDeLaLancee = typeDeLaLancee;
+//    	    this.scoresRound= scoresRound;
 //    	}
     	
 	public int[] getScoresRound() {
 	    return scoresRound;
 	}
 
-	public void setScoresRound(int[] scoresRound) {
-	    this.scoresRound = scoresRound;
+	public void setScoresRound(int i, int valeur) {
+	    this.scoresRound[i] = valeur;
 	}
 
 	public int[] getquilleLancee1() {
 	    return quilleLancee1;
 	}
 
-	public void setquilleLancee1(int[] quilleLancee1) {
-	    this.quilleLancee1 = quilleLancee1;
+	public void setquilleLancee1(int i, int valeur) {
+	    this.quilleLancee1[i] = valeur;
 	}
 
 	public int[] getquilleLancee2() {
 	    return quilleLancee2;
 	}
 
-	public void setquilleLancee2(int[] quilleLancee2) {
-	    this.quilleLancee2 = quilleLancee2;
+	public void setquilleLancee2(int i, int valeur) {
+	    this.quilleLancee2[i] = valeur;
 	}
 
 	public typeLancee[] getTypeDeLaLancee() {
 	    return typeDeLaLancee;
 	}
 
-	public void setTypeDeLaLancee(typeLancee[] typeDeLaLancee) {
-	    this.typeDeLaLancee = typeDeLaLancee;
+	public void setTypeDeLaLancee(int i, Joueur.typeLancee valeur) {
+	    this.typeDeLaLancee[i] = valeur;
 	}
 
 	public static int playersNumber() {

@@ -26,33 +26,34 @@ public class Jeu {
 
     }
 
-//    public static int calculateScore(int round1, Joueur J) {
-//	int round = round1 - 1;
-//	int scoreCalculated = 0;
-//
-//	int somme = J.quilleLancee1[round] + J.quilleLancee2[round];
-//	if (somme < 10) {
-//	    J.typeDeLaLancee[round] = Joueur.typeLancee.NORMAL;
-//	} else {
-//	    if (J.quilleLancee1[round] == 10) {
-//		J.typeDeLaLancee[round] = Joueur.typeLancee.STRIKE;
-//	    } else
-//		J.typeDeLaLancee[round] = Joueur.typeLancee.SPARE;
-//	}
-//	if (round1 != 1) {
-//	    if (J.typeDeLaLancee[round - 1] == Joueur.typeLancee.STRIKE) {
-//		J.scoresRound[round - 1] = J.scoresRound[round - 1] + somme;
-//	    } else if (J.typeDeLaLancee[round - 1] == Joueur.typeLancee.SPARE) {
-//		J.scoresRound[round - 1] = J.scoresRound[round - 1] + J.quilleLancee1[round];
-//	    }
-//	}
-//	
-//
-//    // TODO
-//
-//    return scoreCalculated;
-//
-//    }
+    public static int calculateScore(int round1, Joueur J) {
+	int round = round1 - 1;
+	int scoreCalculated = 0;
+
+	int somme = J.getquilleLancee1()[round] + J.getquilleLancee2()[round];
+	if (somme < 10) {
+		J.setTypeDeLaLancee(round, Joueur.typeLancee.NORMAL);
+	} else {
+	    if (J.getquilleLancee1()[round] == 10) {
+	    	J.setTypeDeLaLancee(round, Joueur.typeLancee.STRIKE);
+	    } else
+	    	J.setTypeDeLaLancee(round, Joueur.typeLancee.SPARE);
+	}
+	if (round1 != 1) {
+	    if (J.getTypeDeLaLancee()[round - 1] == Joueur.typeLancee.STRIKE) {
+	    	J.setScoresRound((round-1), (J.getScoresRound()[round-1]+somme));
+	    } else if (J.getTypeDeLaLancee()[round - 1] == Joueur.typeLancee.SPARE) {
+	    	J.setScoresRound((round-1), (J.getScoresRound()[round-1]+J.getquilleLancee1()[round]));
+
+	    }
+	}
+	
+
+    // TODO
+
+    return scoreCalculated;
+
+    }
 
     public static void main(String[] args) {
 	// TODO Auto-generated method stub
